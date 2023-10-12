@@ -6,7 +6,3 @@ let rec all p xs =
 
 (* Define the isEven function for testing *)
 let isEven n = n mod 2 = 0;;
-
-(* Testing the function *)
-let _ = print_endline (string_of_bool (all isEven [4;2;4;8])); (* should print true *)
-let _ = print_endline (string_of_bool (all isEven [2;2;5;1])); (* should print false *)
