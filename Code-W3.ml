@@ -15,3 +15,25 @@ let valueAt ps x =
     | [] -> 0.0
     | p :: ps -> p *. xn +. aux (xn *. x) ps
   in aux 1.0 ps;;
+
+let degree ps =
+  let rec aux ps =
+    match ps with
+    | [] -> 0
+    | _ :: ps -> 1 + aux ps
+  in match ps with
+  | [] -> 0
+  | _ :: ps -> aux ps;;
+
+  let xs = [3]
+
+
+let rec length p = 
+  match p with
+  | [] -> 0
+  |a :: p -> 1 + length p
+
+let degree p =
+  match p with
+  | [] -> 0
+  | a :: p -> length(a :: p) - 1
